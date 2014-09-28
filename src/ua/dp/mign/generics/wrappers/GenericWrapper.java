@@ -26,6 +26,12 @@ class GenericWrapper <T> {
          */
         String word = wordWrapper.getEntity();
 
+        /*
+         * In case when actual constructor argument will differ from the one
+         * declared in generic type holder it will be detected during compile
+         * time.
+         */
+        //GenericWrapper<Double> numberWrapper = new GenericWrapper<Double>(100);
         GenericWrapper<Double> numberWrapper = new GenericWrapper<Double>(100.0);
         System.out.println(numberWrapper);
         /*
