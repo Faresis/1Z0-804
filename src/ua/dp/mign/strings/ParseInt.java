@@ -6,6 +6,8 @@ class ParseInt {
         System.out.println(Integer.parseInt("111",2));
         System.out.println(Integer.parseInt("111",8));
         System.out.println(Integer.parseInt("111"));
-        System.out.println(Integer.parseInt("211",2));
+        System.out.println(Integer.parseInt("111",10));
+        // will cause NumberFormatException
+        //System.out.println(Integer.parseInt("211",2));
     }
 }
