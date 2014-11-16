@@ -52,6 +52,10 @@ class Formatting {
         System.out.printf("string: %5.7s", "some string");
         System.out.println();
 
+        // empty format string
+        System.out.printf("", "some string");
+        System.out.println();
+
         // date time
         System.out.printf("date time: %1$tD %1$tT", new Date());
         System.out.println();
