@@ -1,15 +1,16 @@
 package ua.dp.mign.io.streams.bytes.serialization;
 
-import java.io.Serializable;
-
-class Data implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+/*
+ * If we will try to write this object to an ObjectOutputStream
+ * NotSerializableException will be thrown because object does
+ * not implement Serializable interface.
+ */
+class Data {
     private String code;
     private String name;
     private long count;
     private double degree;
-    private transient int sessionId;
+    private int sessionId;
 
     public Data(String code, String name, long count, double degree, int sessionId) {
         this.code = code;
