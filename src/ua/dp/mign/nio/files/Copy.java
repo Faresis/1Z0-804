@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.nio.file.Path;
 import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 
 class Copy {
     public static void main(String args[]) {
@@ -31,7 +32,7 @@ class Copy {
         Path path2 = Paths.get(fileName2);
 
         try {
-            Files.copy(path1, path2);
+            Files.copy(path1, path2, StandardCopyOption.REPLACE_EXISTING);
             System.out.println("Files copied successfully.");
         } catch (IOException ioe) {
             System.err.format("Error during processing files [ %s, %s ]: %s.", path1, path2, ioe.getMessage());
