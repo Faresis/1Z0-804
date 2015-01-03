@@ -42,6 +42,8 @@ class Resource implements AutoCloseable {
 class TryWithResources {
     public static void main(String[] args) {
         try (Resource res = new Resource()) {
+            // auto-closeable  resources can't be assigned
+            //res = new Resource();
             res.someMethod();
         } catch (Exception ex) {
             System.out.println("Inner catch.");
