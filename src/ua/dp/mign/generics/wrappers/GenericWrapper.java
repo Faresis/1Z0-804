@@ -31,15 +31,15 @@ class GenericWrapper <T> {
          * declared in generic type holder it will be detected during compile
          * time.
          */
-        //GenericWrapper<Double> numberWrapper = new GenericWrapper<Double>(100);
+        //GenericWrapper<Double> numberWrapper2 = new GenericWrapper<Double>(100);
         GenericWrapper<Double> numberWrapper = new GenericWrapper<Double>(100.0);
         System.out.println(numberWrapper);
         /*
          * Double object was stored inside the numberWrapper.
          * Attempt to assign Double value to Float variable
-         * will be detected during comile time.
+         * will be detected during compile time.
          */
-        //Float number = numberWrapper.getEntity();
+        //Float number2 = numberWrapper.getEntity();
         Double number = numberWrapper.getEntity();
     }
 }
