@@ -17,6 +17,7 @@ class FindFileVisitor extends SimpleFileVisitor<Path> {
         try {
             this.matcher = FileSystems.getDefault().getPathMatcher(pattern);
         } catch (IllegalArgumentException iae) {
+            iae.printStackTrace();
             System.err.println("Invalid pattern.");
             System.exit(-1);
         }
