@@ -13,11 +13,13 @@ class Outer {
     }
 
     /*
-     * Inner classes can't contain static members
+     * Inner classes can't contain static members unless constant.
      */
     class Inner {
         private int innerData = 3;
         //private static int innerStaticData = 4;
+        public static final String CONSTANT = "CONSTANT";
+        public static final int NUM = 42;
 
         private void InnerMethod() {
             System.out.println("InnerMethod.");
@@ -96,5 +98,7 @@ class InClass {
         in.Process();
         o.Process(in);
         in.ProcessOverlapped();
+        System.out.println("Static constant from inner: " + in.CONSTANT);
+        System.out.println("Static num from inner: " + in.NUM);
     }
 }
